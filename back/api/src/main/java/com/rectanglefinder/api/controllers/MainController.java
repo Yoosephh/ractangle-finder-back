@@ -1,10 +1,6 @@
 package com.rectanglefinder.api.controllers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rectanglefinder.api.errors.InvalidMatrixContentError;
 import com.rectanglefinder.api.errors.InvalidMatrixError;
 import com.rectanglefinder.api.errors.UnknownBodyError;
+
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
