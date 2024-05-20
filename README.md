@@ -8,13 +8,10 @@ O deploy da aplicação foi realizado no [Render](https://rectangle-finder-back.
 
 ## Tecnologias utilizadas
 
-* Java + Spring Boot:  Para a criação e gestão do servidor RESTful, oferecendo funcionalidades como injeção de dependências, configurações de banco de dados e mais;
-
-* PostgreSQL:  Banco de dados relacional para armazenamento (persistência) e manipulação dos dados;
+* Java (V.17) + Spring Boot:  Para a criação e gestão do servidor RESTful, oferecendo funcionalidades como injeção de dependências, configurações de banco de dados e mais;
 
 * Spring Data JPA (Java Persistence API):  Interface de acesso ao banco de dados, responsável por mapear as entidades dos modelos e as tabelas do banco de dados, simplificando a interação com o banco;
 
-* Hibernate (ORM):  Framework para acesso ao banco de dados, responsável por mapear as classes do modelo de domínio para as tabelas do banco de dados;
 
 ## Camadas  da Aplicação
 
@@ -32,7 +29,8 @@ A API possui a seguinte rota:
 * **POST** '/rectangle': Retorna a área para o maior retângulo formado dentro da matriz.
 
 **Input**:  Uma matriz de qualquer tamanho, no formato MxN.
-Ex: ```java
+Ex: 
+```java
 [
   ["1","0","1","0","0"],
   ["1","0","1","1","1"],
@@ -46,11 +44,11 @@ Ex: ```java
 
 
 #### Possíveis Erros:
---> Status ``422 (Unprocessable Entity) e a mensagem `Please, provide a matrix with only '0' and/or '1' chars```: A matriz fornecida apresenta algum caracter que é diferente de 0 e/ou 1. É preciso que apenas 0 ou 1 estejam presentes na matriz;
+--> Status ``422 (Unprocessable Entity)`` e a mensagem ``Please, provide a matrix with only '0' and/or '1' chars``: A matriz fornecida apresenta algum caracter que é diferente de 0 e/ou 1. É preciso que apenas 0 ou 1 estejam presentes na matriz;
 
---> Status ``422 (Unprocessable Entity) e a mensagem `Please, provide a matrix in the MxN format. Check if the lenghts for all the rows are equal.```: A matriz fornecida apresenta uma ou mais linhas de diferentes tamanhos. Certifique-se de que todas as linhas possuam o mesmo tamanho;
+--> Status ``422 (Unprocessable Entity)`` e a mensagem ``Please, provide a matrix in the MxN format. Check if the lenghts for all the rows are equal.``: A matriz fornecida apresenta uma ou mais linhas de diferentes tamanhos. Certifique-se de que todas as linhas possuam o mesmo tamanho;
 
---> Status ``422 (Unprocessable Entity) e a mensagem `Please, provide a matrix.```: A matriz fornecida está vazia;
+--> Status ``422 (Unprocessable Entity)`` e a mensagem ``Please, provide a matrix.``: A matriz fornecida está vazia;
 
 
 
