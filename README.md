@@ -4,7 +4,7 @@ O BoardCamp é uma API construída em Java que permite gerenciar o aluguel de ga
 
 ## Deploy URL
 
-O deploy da aplicação foi realizado no [Render](https://boardcamp-api-2uls.onrender.com).
+O deploy da aplicação foi realizado no [Render](https://rectangle-finder-back.onrender.com).
 
 ## Tecnologias utilizadas
 
