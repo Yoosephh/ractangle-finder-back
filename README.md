@@ -10,7 +10,6 @@ O deploy da aplicação foi realizado no [Render](https://rectangle-finder-back.
 
 * Java (V.17) + Spring Boot:  Para a criação e gestão do servidor RESTful, oferecendo funcionalidades como injeção de dependências, configurações de banco de dados e mais;
 
-* Spring Data JPA (Java Persistence API):  Interface de acesso ao banco de dados, responsável por mapear as entidades dos modelos e as tabelas do banco de dados, simplificando a interação com o banco;
 
 ## Lógica do código
 O código utiliza 3 arrays para mapear, procurar por um retângulo e calcular sua área:
