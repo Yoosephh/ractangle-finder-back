@@ -1,6 +1,6 @@
 ## Rectangle Finder
 
-O Rectangle Finder é uma API que mapeia por retângulos em uma matriz de tamanho MxN, constituida apenas de '0's e '1's, e retorna a maior área encontrada para retângulos formados apenas por '1's.
+O Rectangle Finder é uma API que, dada uma matriz MxN composta por "0"s e "1"s, retorna a maior área encontrada para retângulos compostos apenas por "1"s.
 
 ## Deploy URL
 
