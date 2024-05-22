@@ -1,6 +1,6 @@
-## BoardCamp
+## Rectangle Finder
 
-O BoardCamp é uma API construída em Java que permite gerenciar o aluguel de gameboards.
+O Rectangle Finder é uma API que mapeia por retângulos em uma matriz de tamanho MxN, constituida apenas de '0's e '1's, e retorna a maior área encontrada para retângulos formados apenas por '1's.
 
 ## Deploy URL
 
@@ -9,8 +9,6 @@ O deploy da aplicação foi realizado no [Render](https://rectangle-finder-back.
 ## Tecnologias utilizadas
 
 * Java (V.17) + Spring Boot:  Para a criação e gestão do servidor RESTful, oferecendo funcionalidades como injeção de dependências, configurações de banco de dados e mais;
-
-* Spring Data JPA (Java Persistence API):  Interface de acesso ao banco de dados, responsável por mapear as entidades dos modelos e as tabelas do banco de dados, simplificando a interação com o banco;
 
 
 ## Camadas  da Aplicação

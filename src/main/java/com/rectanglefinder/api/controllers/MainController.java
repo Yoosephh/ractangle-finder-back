@@ -27,31 +27,41 @@ public class MainController {
     validateMatrix(matrix);
 
     int rowLength = matrix[0].length;
-    int[] left = new int[rowLength];
-    int[] right = new int[rowLength];
-    int[] height = new int[rowLength];
+    int[] left = new int[rowLength]; //left = [0,0,0,0,0]
+    int[] right = new int[rowLength];// right = [0,0,0,0,0]
+    int[] height = new int[rowLength];// height = [0,0,0,0,0]
 
-    Arrays.fill(right, rowLength);
+    Arrays.fill(right, rowLength); // right = [5,5,5,5,5]
 
     int maxArea = 0;
 
     for (String[] row : matrix) {
-      int currLeft = 0;
-      int currRight = rowLength;
+      // [
+      //   ["1","0","1","0","0"],
+      //   ["1","0","1","1","1"],
+      //   ["1","1","1","1","1"],
+      //   ["1","0","0","1","0"]
+      // ]
 
-      for (int j = 0; j < rowLength; j++) {
+      for (int j = 0; j < rowLength; j++) { 
         height[j] = (row[j].equals("1")) ? height[j] + 1 : 0;
+        // [1, 0, 1, 0, 0]
+        // [2, 0, 2, 1, 1]
       }
 
-      for (int j = 0; j < rowLength; j++) {
+      int currLeft = 0;
+      for (int j = 0; j < rowLength; j++) { 
         if (row[j].equals("1")) {
           left[j] = Math.max(left[j], currLeft);
         } else {
           left[j] = 0;
           currLeft = j + 1;
         }
+        // [0, 0, 2, 0, 0]
+        // [0, 0, 2, 2, 2]
       }
 
+      int currRight = rowLength;
       for (int j = rowLength - 1; j >= 0; j--) {
         if (row[j].equals("1")) {
           right[j] = Math.min(right[j], currRight);
@@ -59,6 +69,8 @@ public class MainController {
           right[j] = rowLength;
           currRight = j;
         }
+        // [5, 5, 3, 5, 5]
+        // [5, 5, 3, 3, 3]
       }
 
       for (int j = 0; j < rowLength; j++) {
