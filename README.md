@@ -7,31 +7,38 @@ O Rectangle Finder é uma API que, dada uma matriz MxN composta por "0"s e "1"s,
 O deploy da aplicação foi realizado no [Render](https://rectangle-finder-back.onrender.com).
 
 ## Como rodar a aplicação (Linux):
-Primeiro vamos atualizar os pacotes do sistema (terminal do linux):
-``sudo apt update​`` e ``sudo apt -y upgrade`` 
-​
-Instale os pacotes Java necessários:
+Primeiro vamos atualizar os pacotes do sistema (terminal do linux): <br />
+``sudo apt update​`` e ``sudo apt -y upgrade`` <br />
+​<br />
+Instalando os pacotes Java necessários:
 
 ``sudo apt install openjdk-17-jdk openjdk-17-jre -y``
+<br />
+<br />
 ​
 Adicione o Java às variáveis de ambiente :
+<br />
  -> Edite os arquivos de vaviáveis de ambiente:
+<br />
 ``sudo nano /etc/environment``
-​
- -> Crie a variável JAVA_HOME ao final do arquivo:
+​<br />
+ -> Crie a variável JAVA_HOME ao final do arquivo:<br />
  ``JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/bin/java``
+<br />
 ​
- -> Reinicie o arquivo de configuração das variáveis com o comando abaixo:
+ -> Reinicie o arquivo de configuração das variáveis com o comando abaixo:<br />
 ``source /etc/environment``
+<br />
 ​
 Para verificar se está tudo certo, rode o comando abaixo:
 ``echo $JAVA_HOME``
-// Deve aparecer o caminho para o java que vc colocou no passo acima
+(Deve aparecer o caminho para o java que vc colocou no passo acima)
 
-Após instalar o Java, instalar os pacotes da aplicação com o comando:
+Após instalar o Java e o Maven, instalar os pacotes da aplicação com o comando:
+<br />
 ``mvn clean package``
 
-E então, rodar o projeto com o comando:
+E então, rodar o projeto com o comando: <br />
 ``java -jar target/api-0.0.1-SNAPSHOT.jar``
 
 
@@ -94,10 +101,6 @@ Ex:
 --> Status ``422 (Unprocessable Entity)`` e a mensagem ``Please, provide a matrix in the MxN format. Check if the lenghts for all the rows are equal.``: A matriz fornecida apresenta uma ou mais linhas de diferentes tamanhos. Certifique-se de que todas as linhas possuam o mesmo tamanho;
 
 --> Status ``422 (Unprocessable Entity)`` e a mensagem ``Please, provide a matrix.``: A matriz fornecida está vazia;
-
-
-
-
 
 
 
