@@ -6,6 +6,35 @@ O Rectangle Finder é uma API que, dada uma matriz MxN composta por "0"s e "1"s,
 
 O deploy da aplicação foi realizado no [Render](https://rectangle-finder-back.onrender.com).
 
+## Como rodar a aplicação (Linux):
+Primeiro vamos atualizar os pacotes do sistema (terminal do linux):
+``sudo apt update​`` e ``sudo apt -y upgrade`` 
+​
+Instale os pacotes Java necessários:
+
+``sudo apt install openjdk-17-jdk openjdk-17-jre -y``
+​
+Adicione o Java às variáveis de ambiente :
+ -> Edite os arquivos de vaviáveis de ambiente:
+``sudo nano /etc/environment``
+​
+ -> Crie a variável JAVA_HOME ao final do arquivo:
+ ``JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/bin/java``
+​
+ -> Reinicie o arquivo de configuração das variáveis com o comando abaixo:
+``source /etc/environment``
+​
+Para verificar se está tudo certo, rode o comando abaixo:
+``echo $JAVA_HOME``
+// Deve aparecer o caminho para o java que vc colocou no passo acima
+
+Após instalar o Java, instalar os pacotes da aplicação com o comando:
+``mvn clean package``
+
+E então, rodar o projeto com o comando:
+``java -jar target/api-0.0.1-SNAPSHOT.jar``
+
+
 ## Tecnologias utilizadas
 
 * Java (V.17) + Spring Boot:  Para a criação e gestão do servidor RESTful, oferecendo funcionalidades como injeção de dependências, configurações de banco de dados e mais;
