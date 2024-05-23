@@ -36,17 +36,9 @@ public class MainController {
     int maxArea = 0;
 
     for (String[] row : matrix) {
-      // [
-      //   ["1","0","1","0","0"],
-      //   ["1","0","1","1","1"],
-      //   ["1","1","1","1","1"],
-      //   ["1","0","0","1","0"]
-      // ]
 
       for (int j = 0; j < rowLength; j++) { 
         height[j] = (row[j].equals("1")) ? height[j] + 1 : 0;
-        // [1, 0, 1, 0, 0]
-        // [2, 0, 2, 1, 1]
       }
 
       int currLeft = 0;
@@ -57,8 +49,6 @@ public class MainController {
           left[j] = 0;
           currLeft = j + 1;
         }
-        // [0, 0, 2, 0, 0]
-        // [0, 0, 2, 2, 2]
       }
 
       int currRight = rowLength;
@@ -69,8 +59,6 @@ public class MainController {
           right[j] = rowLength;
           currRight = j;
         }
-        // [5, 5, 3, 5, 5]
-        // [5, 5, 3, 3, 3]
       }
 
       for (int j = 0; j < rowLength; j++) {
